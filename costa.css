@@ -1,0 +1,160 @@
+/* Importar una fuente piola */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* Fondo general */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #2c2c2c;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+
+/* Scrollbar sutil */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b23c17;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* Título principal */
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #b23c17;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Contenedor padre */
+
+.Padre {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Caja de cada plato */
+
+.nieto {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+
+/* Hover piola */
+
+.nieto:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Título de los platos */
+
+.nieto h2 {
+    text-align: center;
+    background: linear-gradient(90deg, #b23c17, #ff5e3a);
+    color: #fff;
+    padding: 15px;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Imágenes */
+
+.nieto img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    border-bottom: 4px solid #b23c17;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.nieto img:hover {
+    transform: scale(1.06);
+}
+
+
+/* Lista */
+
+.nieto ul {
+    list-style: none;
+    padding: 15px 25px;
+}
+
+.nieto ul li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #333;
+    position: relative;
+    padding-left: 28px;
+    transition: color 0.2s ease;
+}
+
+.nieto ul li:hover {
+    color: #b23c17;
+}
+
+
+/* Icono viñeta personalizada */
+
+.nieto ul li::before {
+    content: "🍽️";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding: 18px;
+    font-size: 0.95rem;
+    background: linear-gradient(90deg, #b23c17, #ff5e3a);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
